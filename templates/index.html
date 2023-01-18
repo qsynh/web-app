@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h2>Just got back your MYE results?<br>Interested in finding out how much to score for Promos to get that elusive A grade / promote to J2?<br>Type in your MYE scores to find out!</h2>
+
+    <form action="/submit" method="post">
+        <label for="subject">Subject:</label>
+        <br>
+        <input type="text" name="subject" id="subject" autofocus placeholder="eg Computing">
+        <br>
+        <label for="mye">MYE score (number from 0 to 100):</label>
+        <br>
+        <input type="text" name="mye" id="mye" placeholder="eg. 65">
+        <br>
+        <label for="grade">Desired overall grade:</label>
+        <br>
+        <input type="text" name="grade" id="grade" placeholder="eg. A">
+        <br>
+        <br>
+        <input type="submit" name value="Submit">
+    </form>
+
+    <br>
+
+    <table class="percentage">
+        <tr>
+            <th>MYE</th>
+            <th>Promos</th>
+            <th>Overall</th>
+        </tr>
+        <tr>
+            <td>20%</td>
+            <td>80%</td>
+            <td>100%</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table class="abc">
+        <tr>
+            <th>Grade</th><th>Score</th>
+        </tr>
+        <tr>
+            <td>A</td><td>70-100</td>
+        </tr>
+        <tr>
+            <td>B</td><td>60-69</td>
+        </tr>
+        <tr>
+            <td>C</td><td>55-59</td>
+        </tr>
+        <tr>
+            <td>D</td><td>50-54</td>
+        </tr>
+        <tr>
+            <td>E</td><td>45-49</td>
+        </tr>
+        <tr>
+            <td>S</td><td>35-44</td>
+        </tr>
+        <tr>
+            <td>U</td><td>0-34</td>
+        </tr>
+    </table>
+
+{% endblock %}

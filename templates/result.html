@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h2>{{ promos }} marks</h2>
+    <p>for Promos will get you grade <span>{{ grade }}</span> for the subject <span>{{ subject }}</span> overall.</p>
+
+    {% if promos != 0 %}
+        <p>Now go study!</p>
+        {% else %}
+        <p>I guess you don't have to study.</p>
+    {% endif %}
+
+    <a href="/">Go back to homepage</a>
+
+{% endblock %}

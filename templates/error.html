@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    {% for msg in error %}
+    <h2>{{ msg }}</h2>
+    {% endfor %}
+
+    <a href="/">Go back to homepage</a>
+
+{% endblock %}
